@@ -28,6 +28,10 @@ public class Account {
         balance = balance - amount;
     }
 
+    public int balance() {
+        return balance;
+    }
+
     @Override
     public String toString() {
         return "example.Account{" +
