@@ -2,7 +2,14 @@ package junit;
 
 import example.Account;
 import org.junit.*;
-import org.junit.rules.*;
+
+import static org.junit.Assert.*;
+
+import org.junit.rules.ExpectedException;
+
+import static org.hamcrest.CoreMatchers.*;
+
+
 
 public class AccountTest {
 
@@ -42,4 +49,9 @@ public class AccountTest {
         account.withdraw(AMOUNT_TO_BE_WITHDRAWN);
     }
 
+    @Test
+    public void testHamcrest() throws Exception {
+        assertThat("Ala", is(not("kot")));
+
+    }
 }
